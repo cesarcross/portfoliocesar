@@ -1,19 +1,18 @@
-import { Contact, Container, Intro, Projects } from './index.style';
 import Link from 'next/link';
 
-// import astrobay from '../assets/images/astrobay.png';
+import styles from './styles/home.module.css';
 
 import astrobay from '../assets/images/astrobay.png';
 
 function HomePage() {
   return (
-    <Container>
+    <div className={styles.homecontainer}>
       <div>Welcome to Next.js!</div>
-      <Intro>
+      <div className='homeintro'>
         <p>Cesar</p>
         <p>Corregiari</p>
-      </Intro>
-      <Projects>
+      </div>
+      <div className='homeprojects'>
         <a href='https://www.astrobay.vercel.app' target='blank'>
           <p>CLIQUE AQUI</p>
         </a>
@@ -23,11 +22,11 @@ function HomePage() {
             <p>CLIQUE AQUI</p>
           </a>
         </Link>
-      </Projects>
-      <Contact>
+      </div>
+      <div className='homecontact'>
         <p>Entre em contato!</p>
-      </Contact>
-    </Container>
+      </div>
+    </div>
   );
 }
 

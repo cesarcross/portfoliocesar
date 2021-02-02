@@ -1,6 +1,6 @@
-import { Container } from './todo.style';
+// import { Container } from './todo.style';
+// import Button from '../components/Button';
 import { useState } from 'react';
-import Button from '../components/Button';
 import Tasks from '../components/Tasks';
 import AddTask from '../components/AddTask';
 
@@ -24,23 +24,24 @@ function ToDo() {
     setTasks([...tasks, newTask]);
   };
 
-  // Delete task
+  // Save Task to LocalStorage
+
+  // Delete Task
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
   return (
-    <Container>
-      <h1>Lista de tarefas aqui</h1>
-      <Button color='green' text='Add' />
-
+    <div>
+      <h2>Tarefas</h2>
+      {/* <Button color='green' text='Add' /> */}
       <AddTask onAdd={addTask} />
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} />
       ) : (
         'No tasks to show'
       )}
-    </Container>
+    </div>
   );
 }
 

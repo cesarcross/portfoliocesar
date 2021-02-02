@@ -1,16 +1,18 @@
-import { FaTimes } from 'react-icons/fa';
+import { FaRegCheckCircle } from 'react-icons/fa';
+
+import styles from '../styles/todo.module.css';
 
 const Task = ({ task, onDelete }) => {
   return (
-    <div>
-      <h3>
+    <div className={styles.taskcontainer}>
+      <h4>
         {task.text}{' '}
-        <FaTimes
-          style={{ color: 'red', cursor: 'pointer' }}
+        <FaRegCheckCircle
+          style={{ color: 'green', cursor: 'pointer' }}
           onClick={() => onDelete(task.id)}
         />
-      </h3>
-      <p>{task.id}</p>
+      </h4>
+      {/* <p>{task.id}</p> */}
     </div>
   );
 };

@@ -1,7 +1,11 @@
 import { useState } from 'react';
 
+import styles from '../styles/todo.module.css';
+
 const AddTask = ({ onAdd }) => {
   const [text, setText] = useState('');
+
+  console.log(text);
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -17,18 +21,17 @@ const AddTask = ({ onAdd }) => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
-      <div>
-        <label>Task</label>
+    <form onSubmit={onSubmit} className={styles.formcontainer}>
+      <label>Adicionar tarefa </label>
+      <div className={styles.addtask}>
         <input
           type='text'
           placeholder='Add Task'
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
+        <input type='submit' value='Save Task' />
       </div>
-
-      <input type='submit' value='Save Task' />
     </form>
   );
 };

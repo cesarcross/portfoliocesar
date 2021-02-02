@@ -1,0 +1,43 @@
+/* AddTask.jsx styles */
+
+.formcontainer {
+  /* border: 1px solid red; */
+}
+
+.formcontainer label {
+  font-size: 1.5rem;
+}
+
+.addtask {
+  /* border: 1px solid blue; */
+}
+
+.addtask input[type='text'] {
+  height: 30px;
+  width: 240px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.addtask input[type='submit'] {
+  height: 35px;
+  border-radius: 5px;
+  /* border: none; */
+}
+
+/* Task.jsx */
+
+.taskcontainer {
+  background-color: #f6f5f5;
+  height: 40px;
+  width: 300px;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px 2px;
+  display: flex;
+}
+
+.taskcontainer h4 {
+  font-weight: lighter;
+  margin: auto 2px;
+}
