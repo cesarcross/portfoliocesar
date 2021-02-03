@@ -1,20 +1,20 @@
 // import { Container } from './todo.style';
+import { useState, useEffect } from 'react';
 // import Button from '../components/Button';
-import { useState } from 'react';
 import Tasks from '../components/Tasks';
 import AddTask from '../components/AddTask';
 
 function ToDo() {
-  const [tasks, setTasks] = useState([
-    {
-      id: 1,
-      text: 'Dogwalker',
-    },
-    {
-      id: 2,
-      text: 'go to shopping',
-    },
-  ]);
+  const [tasks, setTasks] = useState([]);
+
+  useEffect(() => {
+    const storedTasks = JSON.parse(localStorage.getItem('tasks'));
+    if (storedTasks) setTasks(storedTasks);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
 
   // Add Task
   const addTask = (task) => {
@@ -24,17 +24,16 @@ function ToDo() {
     setTasks([...tasks, newTask]);
   };
 
-  // Save Task to LocalStorage
-
-  // Delete Task
+  // Delete task
   const deleteTask = (id) => {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
   return (
     <div>
-      <h2>Tarefas</h2>
+      <h1>Lista de tarefas aqui</h1>
       {/* <Button color='green' text='Add' /> */}
+
       <AddTask onAdd={addTask} />
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} />

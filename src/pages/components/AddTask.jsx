@@ -1,9 +1,18 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import styles from '../styles/todo.module.css';
 
 const AddTask = ({ onAdd }) => {
   const [text, setText] = useState('');
+
+  // useEffect(() => {
+  //   const storedTasks = JSON.parse(localStorage.getItem('tasks'));
+  //   if (storedTasks) setText(storedTasks);
+  // }, []);
+
+  // useEffect(() => {
+  //   localStorage.setItem('tasks', JSON.stringify(text));
+  // }, [text]);
 
   console.log(text);
 
@@ -28,7 +37,9 @@ const AddTask = ({ onAdd }) => {
           type='text'
           placeholder='Add Task'
           value={text}
-          onChange={(e) => setText(e.target.value)}
+          onChange={(e) => {
+            setText(e.target.value);
+          }}
         />
         <input type='submit' value='Save Task' />
       </div>
