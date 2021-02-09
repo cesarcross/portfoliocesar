@@ -5,15 +5,6 @@ import styles from '../styles/todo.module.css';
 const AddTask = ({ onAdd }) => {
   const [text, setText] = useState('');
 
-  // useEffect(() => {
-  //   const storedTasks = JSON.parse(localStorage.getItem('tasks'));
-  //   if (storedTasks) setText(storedTasks);
-  // }, []);
-
-  // useEffect(() => {
-  //   localStorage.setItem('tasks', JSON.stringify(text));
-  // }, [text]);
-
   console.log(text);
 
   const onSubmit = (e) => {
