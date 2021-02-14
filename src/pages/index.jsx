@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Intro from './components/Intro';
 
 import styles from './styles/home.module.css';
 
@@ -11,6 +12,7 @@ function HomePage() {
       <div className='homeintro'>
         <p>Cesar</p>
         <p>Corregiari</p>
+        <Intro />
       </div>
       <div className='homeprojects'>
         <a href='https://www.astrobay.vercel.app' target='blank'>

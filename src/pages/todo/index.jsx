@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 // import Button from '../components/Button';
 import Tasks from '../components/Tasks';
-import AddTask from '../components/AddTask';
+import AddTask from '../components/taskmanager/AddTask';
 
 function ToDo() {
   const [tasks, setTasks] = useState([]);
