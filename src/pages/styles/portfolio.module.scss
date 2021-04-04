@@ -2,36 +2,59 @@
   // border: 1px solid red;
   padding: 20px;
   // border-radius: 5px;
-  // background: #f6d743;
+  // background: #f7f2f2;
   font-family: Helvetica;
 
-  h3 {
-    color: #ff6054;
+  h2 {
+    width: fit-content;
+    background-color: #84eaba;
+    padding: 1px 3px;
   }
 }
 
 .projectstyle {
   h3 {
-    color: #ff6054;
+    color: #1b1c25;
     margin: 5px auto;
   }
   p {
-    color: #ff6054;
+    color: #1b1c25;
     margin: 5px auto;
   }
 
   img {
     width: 250px;
     margin-bottom: 20px;
+    // border: 1px solid #ff6054;
+    border-radius: 5px;
+    box-shadow: 6px 12px 10px -9px rgba(141, 141, 141, 0.71);
+    -webkit-box-shadow: 6px 12px 10px -9px rgba(141, 141, 141, 0.71);
+    -moz-box-shadow: 6px 12px 10px -9px rgba(141, 141, 141, 0.71);
 
     &:hover {
       width: 265px;
       transition: 0.4s ease;
+    }
+  }
+}
 
-      // https://neumorphism.io/#e0e0e0
-      // border-radius: 5px;
-      // background: #84eaba;
-      // box-shadow: 18px 18px 36px #80e3b4, -18px -18px 36px #88f1c0;
+.projectscontainer {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 700px;
+
+    img {
+      width: 300px;
+    }
+  }
+
+  @media screen and (min-width: 998px) {
+    max-width: 1200px;
+
+    img {
+      width: 400px;
     }
   }
 }

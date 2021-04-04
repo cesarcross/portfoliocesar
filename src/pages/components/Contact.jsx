@@ -24,6 +24,8 @@ const Contact = () => {
       }}
     >
       <div className={styles.container}>
+        <h2>Get in touch!</h2>
+
         <Form className={styles.form}>
           <label htmlFor='name'>Name</label>
           <Field name='name' type='text' />

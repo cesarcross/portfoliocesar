@@ -1,16 +1,30 @@
 .container {
   background: #1b1c25;
+  font-family: Helvetica, sans-serif;
+  border-radius: 5px;
+
+  h2 {
+    color: #84eaba;
+    padding: 20px;
+    margin: 0 0 0 30px;
+  }
+
+  @media screen and (min-width: 768px) {
+    h2 {
+      margin: 10px 0;
+      text-align: center;
+      font-size: 32px;
+    }
+  }
 }
 
 .form {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  font-family: Helvetica, sans-serif;
 
   label {
     color: #84eaba;
-    float: none;
     margin: 0 auto;
     width: 250px;
   }
@@ -28,5 +42,15 @@
     margin: 0 auto 20px;
     font-size: 16px;
     font-weight: 700;
+  }
+
+  @media screen and (min-width: 998px) {
+    // label {
+    //   margin: 0 0 0 300px;
+    // }
+
+    // input {
+    //   width: 350px;
+    // }
   }
 }

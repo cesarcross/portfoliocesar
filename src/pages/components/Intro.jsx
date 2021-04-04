@@ -21,7 +21,9 @@ const Intro = () => {
     <>
       <div className={styles.intro}>
         <div>
-          <p>Hello! I'm Cesar</p>
+          <p>
+            Hello! I'm<span> Cesar</span>
+          </p>
           <p>I am a Fullstack developer building cool websites and apps.</p>
         </div>
         <img src={code11} alt='' />
@@ -30,15 +32,18 @@ const Intro = () => {
         </Link>
       </div>
       <div className={styles.introdescription}>
-        <h3>Services</h3>
-        {/* <img src={responsive} alt='' /> */}
+        <img src={responsive} alt='' />
 
-        <ul>
-          <li>Web development</li>
-          <li>Responsive design</li>
-          <li>Mobile applications</li>
-          <li>Performatic websites</li>
-        </ul>
+        <div>
+          <h2>Services</h2>
+
+          <ul>
+            <li>Web development</li>
+            <li>Responsive design</li>
+            <li>Mobile applications</li>
+            <li>Performatic websites</li>
+          </ul>
+        </div>
       </div>
     </>
   );

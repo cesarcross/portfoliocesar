@@ -11,22 +11,34 @@ $font: Helvetica;
   display: flex;
   flex-direction: column;
   padding: 20px;
-  // border-radius: 5px;
+
+  span {
+    color: #84eaba;
+  }
 
   button {
-    max-width: 280px;
+    width: 250px;
     height: 50px;
     background: #84eaba;
     color: #1b1c25;
     border-radius: 5px;
     outline: none;
     text-decoration: none;
-    font-style: bold;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 10px auto;
   }
 
-  // img {
-  //   // width: 500px;
-  // }
+  @media screen and (min-width: 768px) {
+    padding: 20px 80px;
+    font-size: 36px;
+    border-radius: 0 0 5px 5px;
+
+    img {
+      width: 500px;
+      align-self: center;
+    }
+  }
 }
 
 .introdescription {
@@ -34,9 +46,34 @@ $font: Helvetica;
   padding: 20px;
   color: #1b1c25;
 
+  h2 {
+    width: fit-content;
+    background-color: #84eaba;
+    padding: 1px 3px;
+  }
+
   ul {
     margin: 5px 0 0 0;
     padding: 0;
     list-style-type: none;
+  }
+
+  img {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px auto;
+
+    ul {
+      font-size: 18px;
+    }
+
+    img {
+      display: flex;
+      width: 200px;
+    }
   }
 }
