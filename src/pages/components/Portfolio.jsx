@@ -6,11 +6,12 @@ import biohazard from '../../assets/images/biohazard.png';
 import uva from '../../assets/images/uva.png';
 import quitanda from '../../assets/images/quitanda.png';
 
-import styles from '../styles/home.module.scss';
+import styles from '../styles/portfolio.module.scss';
 
 const Portfolio = () => {
   return (
-    <div class='homeprojects'>
+    <div class={styles.homeprojects}>
+      <h3>Featured Projects</h3>
       <div class={styles.projectstyle}>
         <h3>Astrobay</h3>
         <p>Ecommerce</p>

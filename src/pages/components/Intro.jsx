@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from '../styles/home.module.scss';
+import Link from 'next/link';
+import styles from '../styles/intro.module.scss';
 
 import code1 from '../../assets/images/code1.png';
 import code2 from '../../assets/images/code2.png';
@@ -13,6 +14,7 @@ import code9 from '../../assets/images/code9.png';
 import code10 from '../../assets/images/code10.png';
 import code11 from '../../assets/images/code11.png';
 import code12 from '../../assets/images/code12.png';
+import responsive from '../../assets/images/responsive.png';
 
 const Intro = () => {
   return (
@@ -20,12 +22,23 @@ const Intro = () => {
       <div className={styles.intro}>
         <div>
           <p>Hello! I'm Cesar</p>
-          <p>Hello! I am a Full stack developer building cool applications</p>
+          <p>I am a Fullstack developer building cool websites and apps.</p>
         </div>
-        <img src={code12} alt='' />
+        <img src={code11} alt='' />
+        <Link href='/contact'>
+          <button>CONTACT</button>
+        </Link>
       </div>
       <div className={styles.introdescription}>
-        <p>ola</p>
+        <h3>Services</h3>
+        {/* <img src={responsive} alt='' /> */}
+
+        <ul>
+          <li>Web development</li>
+          <li>Responsive design</li>
+          <li>Mobile applications</li>
+          <li>Performatic websites</li>
+        </ul>
       </div>
     </>
   );

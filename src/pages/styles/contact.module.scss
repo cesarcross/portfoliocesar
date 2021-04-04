@@ -1,0 +1,32 @@
+.container {
+  background: #1b1c25;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  font-family: Helvetica, sans-serif;
+
+  label {
+    color: #84eaba;
+    float: none;
+    margin: 0 auto;
+    width: 250px;
+  }
+
+  input {
+    margin: 0 auto 20px;
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+  }
+
+  button {
+    width: 200px;
+    height: 50px;
+    margin: 0 auto 20px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
