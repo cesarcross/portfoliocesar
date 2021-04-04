@@ -15,6 +15,7 @@ import code10 from '../../assets/images/code10.png';
 import code11 from '../../assets/images/code11.png';
 import code12 from '../../assets/images/code12.png';
 import responsive from '../../assets/images/responsive.png';
+import code66 from '../../assets/images/code66.jpg';
 
 const Intro = () => {
   return (
@@ -32,7 +33,7 @@ const Intro = () => {
         </Link>
       </div>
       <div className={styles.introdescription}>
-        <img src={responsive} alt='' />
+        <img src={code66} alt='' />
 
         <div>
           <h2>Services</h2>

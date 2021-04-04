@@ -13,7 +13,7 @@ const Portfolio = () => {
     <div class={styles.homeprojects}>
       <h2>Featured Projects</h2>
       <div className={styles.projectscontainer}>
-        <div class={styles.projectstyle}>
+        <div className={styles.projectstyle}>
           <h3>Astrobay</h3>
           <p>Ecommerce</p>
           <a href='https://astrobay.vercel.app' target='_blank'>
