@@ -1,6 +1,4 @@
-// import { Container } from './todo.style';
 import { useState, useEffect } from 'react';
-// import Button from '../components/Button';
 import Tasks from '../components/Tasks';
 import AddTask from '../components/taskmanager/AddTask';
 
