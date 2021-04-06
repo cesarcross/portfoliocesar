@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 
 import astrobay from '../../assets/images/astrobay.png';
+import codecaravan from '../../assets/images/codecaravan.png';
 import biohazard from '../../assets/images/biohazard.png';
 import uva from '../../assets/images/uva.png';
 import quitanda from '../../assets/images/quitanda.png';
@@ -20,18 +21,26 @@ const Portfolio = () => {
             <img src={astrobay} alt='' />
           </a>
         </div>
-        <div class={styles.projectstyle}>
-          <h3>Biohazard Match</h3>
-          <p>Game</p>
-          <a href='https://biohazardgame.netlify.app/' target='_blank'>
-            <img src={biohazard} alt='' />
-          </a>
-        </div>
+
         <div class={styles.projectstyle}>
           <h3>Uva</h3>
           <p>Restaurant</p>
           <a href='https://restauranteuva.now.sh/' target='_blank'>
             <img src={uva} alt='' />
+          </a>
+        </div>
+        <div class={styles.projectstyle}>
+          <h3>Code Caravan</h3>
+          <p>Agency</p>
+          <a href='https://www.codecaravan.com.br/' target='_blank'>
+            <img src={codecaravan} alt='' />
+          </a>
+        </div>
+        <div class={styles.projectstyle}>
+          <h3>Biohazard Match</h3>
+          <p>Game</p>
+          <a href='https://biohazardgame.netlify.app/' target='_blank'>
+            <img src={biohazard} alt='' />
           </a>
         </div>
 

@@ -23,7 +23,7 @@ const Contact = () => {
         }, 400);
       }}
     >
-      <div className={styles.container}>
+      <div className={styles.container} id='#contact'>
         <h2>Get in touch!</h2>
 
         <Form className={styles.form}>
