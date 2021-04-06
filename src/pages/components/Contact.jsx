@@ -2,6 +2,7 @@ import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
 import styles from '../styles/contact.module.scss';
+import whats from '../../assets/images/whats.png';
 
 const Contact = () => {
   return (
@@ -23,10 +24,10 @@ const Contact = () => {
         }, 400);
       }}
     >
-      <div className={styles.container} id='#contact'>
-        <h2>Get in touch!</h2>
-
+      <div className={styles.container} id='contact'>
         <Form className={styles.form}>
+          <h2>Get in touch!</h2>
+
           <label htmlFor='name'>Name</label>
           <Field name='name' type='text' />
           <ErrorMessage name='name' />
@@ -39,7 +40,19 @@ const Contact = () => {
           <Field name='message' type='text' />
           <ErrorMessage name='message' />
 
-          <button type='submit'>Submit</button>
+          {/* <div className={styles.whats}>
+            <p>Or text me on Whatsapp</p>
+            <img src={whats} alt='' />
+          </div> */}
+          <a href='https://wa.me/5511981263581' target='_blank'>
+            <div className={styles.whats}>
+              <p>
+                Or text me on Whatsapp <img src={whats} alt='' />
+              </p>
+            </div>
+          </a>
+
+          <button type='submit'>Send</button>
         </Form>
       </div>
     </Formik>

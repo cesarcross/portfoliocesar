@@ -1,14 +1,12 @@
 .homeprojects {
-  // border: 1px solid red;
   padding: 20px;
-  // border-radius: 5px;
-  // background: #f7f2f2;
   font-family: Helvetica;
 
   h2 {
     width: fit-content;
     background-color: #84eaba;
     padding: 1px 3px;
+    font-size: 2rem;
   }
 }
 
@@ -16,25 +14,21 @@
   h3 {
     color: #1b1c25;
     margin: 5px auto;
+    font-size: 1.5rem;
   }
   p {
     color: #1b1c25;
     margin: 5px auto;
+    font-size: 1.3rem;
   }
 
   img {
     width: 250px;
     margin-bottom: 20px;
-    // border: 1px solid #ff6054;
     border-radius: 5px;
     box-shadow: 6px 12px 10px -9px rgba(141, 141, 141, 0.71);
     -webkit-box-shadow: 6px 12px 10px -9px rgba(141, 141, 141, 0.71);
     -moz-box-shadow: 6px 12px 10px -9px rgba(141, 141, 141, 0.71);
-
-    // &:hover {
-    //   width: 265px;
-    //   transition: 0.4s ease;
-    // }
   }
 }
 
@@ -53,8 +47,11 @@
   @media screen and (min-width: 998px) {
     max-width: 1200px;
 
-    img {
-      width: 400px;
-    }
+    // img {
+    // &:hover {
+    //   width: 265px;
+    //   transition: 0.4s ease;
+    // }
+    // }
   }
 }

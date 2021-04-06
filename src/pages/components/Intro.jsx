@@ -25,7 +25,7 @@ const Intro = () => {
           <p>
             Hello! I'm<span> Cesar</span>
           </p>
-          <p>I am a Fullstack developer building cool websites and apps.</p>
+          <p>I am a Web developer building cool websites and apps.</p>
         </div>
         <img src={code11} alt='' />
         <Link href='#contact'>

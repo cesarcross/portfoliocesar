@@ -1,46 +1,60 @@
 .container {
   background: #1b1c25;
   font-family: Helvetica, sans-serif;
-  border-radius: 5px;
+  // border-radius: 0 0 5px 5px;
 
-  h2 {
-    color: #84eaba;
-    padding: 20px;
-    margin: 0 0 0 30px;
-  }
-
-  @media screen and (min-width: 768px) {
-    h2 {
-      margin: 10px 0;
-      text-align: center;
-      font-size: 32px;
-    }
-  }
+  // @media screen and (min-width: 768px) {
+  //   h2 {
+  //     margin: 10px 0;
+  //     text-align: center;
+  //     font-size: 32px;
+  //   }
+  // }
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  width: 90%;
+  margin: auto;
 
+  h2,
   label {
     color: #84eaba;
-    margin: 0 auto;
-    width: 250px;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  label {
+    font-size: 1.3rem;
   }
 
   input {
-    margin: 0 auto 20px;
-    width: 250px;
     height: 30px;
     border-radius: 5px;
+    margin-bottom: 15px;
+  }
+
+  input:last-of-type {
+    height: 150px;
+    margin-bottom: 5px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img {
+    width: 50px;
   }
 
   button {
     width: 200px;
     height: 50px;
-    margin: 0 auto 20px;
-    font-size: 16px;
+    margin: 10px auto 30px;
+    font-size: 2rem;
     font-weight: 700;
   }
 
@@ -52,5 +66,20 @@
     // input {
     //   width: 350px;
     // }
+  }
+}
+
+.whats {
+  display: flex;
+
+  p {
+    // font-family: 'Sacramento', cursive;
+    font-family: 'Cookie', cursive;
+    // font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    // font-weight: 600;
+    font-style: italic;
+    margin: 0 auto 15px;
+    color: #fff;
   }
 }

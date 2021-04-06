@@ -2,17 +2,18 @@ $font: Helvetica;
 
 // INTRO
 .intro {
-  // border: 1px solid green;
   background: #1b1c25;
   color: #fff;
   font-family: $font;
   font-weight: 700;
-  font-size: 28px;
   display: flex;
   flex-direction: column;
   padding: 20px;
-  border-radius: 5px;
-  margin: 0 !important;
+
+  p,
+  span {
+    font-size: 2.5rem;
+  }
 
   span {
     color: #84eaba;
@@ -28,7 +29,6 @@ $font: Helvetica;
     outline: none;
     text-decoration: none;
     font-weight: 700;
-    font-size: 16px;
     margin: 10px auto;
   }
 
@@ -43,6 +43,7 @@ $font: Helvetica;
   }
 }
 
+// SERVICES
 .introdescription {
   font-family: $font;
   padding: 20px;
@@ -52,12 +53,13 @@ $font: Helvetica;
     width: fit-content;
     background-color: #84eaba;
     padding: 1px 3px;
+    font-size: 2rem;
   }
 
   ul {
-    margin: 5px 0 0 0;
     padding: 0;
     list-style-type: none;
+    font-size: 1.5rem;
   }
 
   img {
