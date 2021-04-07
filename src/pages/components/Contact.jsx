@@ -40,19 +40,15 @@ const Contact = () => {
           <Field name='message' type='text' />
           <ErrorMessage name='message' />
 
-          {/* <div className={styles.whats}>
-            <p>Or text me on Whatsapp</p>
-            <img src={whats} alt='' />
-          </div> */}
-          <a href='https://wa.me/5511981263581' target='_blank'>
-            <div className={styles.whats}>
+          <div className={styles.mobilewhats}>
+            <a href='https://wa.me/5511981263581' target='_blank'>
               <p>
                 Or text me on Whatsapp <img src={whats} alt='' />
               </p>
-            </div>
-          </a>
+            </a>
 
-          <button type='submit'>Send</button>
+            <button type='submit'>Send</button>
+          </div>
         </Form>
       </div>
     </Formik>

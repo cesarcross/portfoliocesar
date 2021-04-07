@@ -5,7 +5,8 @@ import astrobay from '../../assets/images/astrobay.png';
 import codecaravan from '../../assets/images/codecaravan.png';
 import biohazard from '../../assets/images/biohazard.png';
 import uva from '../../assets/images/uva.png';
-import quitanda from '../../assets/images/quitanda.png';
+// import quitanda from '../../assets/images/quitanda.png';
+import gamestube from '../../assets/images/gamestube.png';
 
 import styles from '../styles/portfolio.module.scss';
 
@@ -44,11 +45,19 @@ const Portfolio = () => {
           </a>
         </div>
 
-        <div class={styles.projectstyle}>
+        {/* <div class={styles.projectstyle}>
           <h3>Quitanda Veggie</h3>
           <p>Restaurant</p>
           <a href='https://quitandavegana.now.sh/' target='_blank'>
             <img src={quitanda} alt='' />
+          </a>
+        </div> */}
+
+        <div class={styles.projectstyle}>
+          <h3>Games Tube</h3>
+          <p>Video website</p>
+          <a href='https://quitandavegana.now.sh/' target='_blank'>
+            <img src={gamestube} alt='' />
           </a>
         </div>
       </div>

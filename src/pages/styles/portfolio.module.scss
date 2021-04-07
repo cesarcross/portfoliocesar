@@ -6,29 +6,21 @@
     width: fit-content;
     background-color: #84eaba;
     padding: 1px 3px;
-    font-size: 2rem;
-  }
-}
-
-.projectstyle {
-  h3 {
-    color: #1b1c25;
-    margin: 5px auto;
-    font-size: 1.5rem;
-  }
-  p {
-    color: #1b1c25;
-    margin: 5px auto;
-    font-size: 1.3rem;
+    font-size: 2.5rem;
   }
 
-  img {
-    width: 250px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 6px 12px 10px -9px rgba(141, 141, 141, 0.71);
-    -webkit-box-shadow: 6px 12px 10px -9px rgba(141, 141, 141, 0.71);
-    -moz-box-shadow: 6px 12px 10px -9px rgba(141, 141, 141, 0.71);
+  @media screen and (min-width: 768px) {
+    margin: 0 auto;
+    padding: 1rem 4rem;
+  }
+
+  @media screen and (min-width: 998px) {
+    margin-bottom: 5rem;
+
+    h2 {
+      font-size: 3rem;
+      margin-left: 7rem;
+    }
   }
 }
 
@@ -37,21 +29,73 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 700px;
-
-    img {
-      width: 300px;
-    }
   }
 
   @media screen and (min-width: 998px) {
-    max-width: 1200px;
+    padding: 1rem 7rem;
+  }
 
-    // img {
-    // &:hover {
-    //   width: 265px;
-    //   transition: 0.4s ease;
-    // }
-    // }
+  @media screen and (min-width: 1180px) {
+    justify-content: space-around;
+  }
+}
+
+.projectstyle {
+  display: flex;
+  flex-direction: column;
+
+  h3,
+  p {
+    margin-left: 0;
+  }
+
+  h3 {
+    color: #1b1c25;
+    margin: 3px 0;
+    font-size: 1.5rem;
+  }
+  p {
+    color: #1b1c25;
+    margin: 3px 0;
+    font-size: 1.3rem;
+  }
+
+  img {
+    width: 270px;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    box-shadow: 6px 12px 10px -9px rgba(141, 141, 141, 0.71);
+    -webkit-box-shadow: 6px 12px 10px -9px rgba(141, 141, 141, 0.71);
+    -moz-box-shadow: 6px 12px 10px -9px rgba(141, 141, 141, 0.71);
+  }
+
+  @media screen and (min-width: 375px) {
+    img {
+      width: 330px;
+    }
+  }
+
+  @media screen and (min-width: 414px) {
+    img {
+      width: 360px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    img {
+      width: 320px;
+    }
+  }
+
+  @media screen and (min-width: 1180px) {
+    img {
+      width: 300px;
+      margin: 0 1rem 2rem 0;
+
+      &:hover {
+        width: 310px;
+        transition: 0.5s ease;
+      }
+    }
   }
 }

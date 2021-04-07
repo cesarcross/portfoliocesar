@@ -8,7 +8,7 @@ $font: Helvetica;
   font-weight: 700;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 2rem;
 
   p,
   span {
@@ -29,37 +29,67 @@ $font: Helvetica;
     outline: none;
     text-decoration: none;
     font-weight: 700;
-    margin: 10px auto;
+    margin: 1rem auto;
+
+    &:hover {
+      background: #1b1c25;
+      color: #84eaba;
+      transition: 1s ease;
+    }
   }
 
   @media screen and (min-width: 768px) {
-    padding: 20px 80px;
-    font-size: 36px;
+    padding: 3rem 9rem;
+
+    p,
+    span {
+      font-size: 4rem;
+    }
 
     img {
       width: 500px;
       align-self: center;
     }
+
+    button {
+      font-size: 1.8rem;
+      height: 70px;
+    }
+  }
+
+  @media screen and (min-width: 998px) {
+    padding: 3rem 16rem;
+    border-radius: 0 0 10px 10px;
+
+    p,
+    span {
+    }
   }
 }
 
 // SERVICES
-.introdescription {
+.services {
   font-family: $font;
-  padding: 20px;
+  padding: 2rem;
   color: #1b1c25;
 
   h2 {
     width: fit-content;
     background-color: #84eaba;
-    padding: 1px 3px;
-    font-size: 2rem;
+    padding: 0.1rem 0.3rem;
+    font-size: 2.5rem;
+
+    // &:hover {
+    //   background: #1b1c25;
+    //   color: #84eaba;
+    //   transition: 1s ease;
+    // }
   }
 
   ul {
     padding: 0;
     list-style-type: none;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   img {
@@ -68,16 +98,34 @@ $font: Helvetica;
 
   @media screen and (min-width: 768px) {
     display: flex;
-    justify-content: space-around;
-    margin: 50px auto;
+    justify-content: space-between;
+    margin: 5rem auto;
+
+    h2,
+    ul {
+      margin-right: 1rem;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
 
     ul {
-      font-size: 18px;
+      font-size: 2rem;
     }
 
     img {
       display: flex;
-      width: 350px;
+      width: 400px;
+    }
+  }
+
+  @media screen and (min-width: 998px) {
+    justify-content: space-evenly;
+    // padding: 10rem;
+
+    ul {
+      width: 270px;
     }
   }
 }
