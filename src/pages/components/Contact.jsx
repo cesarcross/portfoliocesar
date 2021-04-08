@@ -5,9 +5,9 @@ import axios from 'axios';
 import styles from '../styles/contact.module.scss';
 import whats from '../../assets/images/whats.png';
 
-const isRequired = () => {
-  return alert('Please fill all the fields');
-};
+// const isRequired = () => {
+//   return alert('Please fill all the fields');
+// };
 
 const Contact = () => {
   return (
