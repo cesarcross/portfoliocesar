@@ -1,8 +1,13 @@
-import { Formik, Field, Form, ErrorMessage } from 'formik';
+import { Formik, Field, Form, ErrorMessage, useFormik } from 'formik';
 import * as Yup from 'yup';
+import axios from 'axios';
 
 import styles from '../styles/contact.module.scss';
 import whats from '../../assets/images/whats.png';
+
+const isRequired = () => {
+  return alert('Please fill all the fields');
+};
 
 const Contact = () => {
   return (
@@ -10,18 +15,24 @@ const Contact = () => {
       initialValues={{ name: '', email: '', message: '' }}
       validationSchema={Yup.object({
         name: Yup.string()
-          .max(15, 'Must be 15 characters or less')
-          .required('Required'),
+          // .max(15, 'Must be 15 characters or less')
+          .required('isRequired'),
 
         email: Yup.string().email('Invalid email address').required('Required'),
 
         message: Yup.string().required('Required'),
       })}
       onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 400);
+        console.log('sent', JSON.stringify(values, null, 2));
+        axios
+          .post('/api/mail', values)
+          .then(function (response) {
+            console.log(response);
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+        setSubmitting(false);
       }}
     >
       <div className={styles.container} id='contact'>
@@ -56,3 +67,61 @@ const Contact = () => {
 };
 
 export default Contact;
+
+// const SignupForm = () => {
+//   // Pass the useFormik() hook initial form values and a submit function that will
+//   // be called when the form is submitted
+//   const formik = useFormik({
+//     initialValues: {
+//       name: '',
+//       email: '',
+//       message: '',
+//     },
+//     onSubmit: (values) => {
+//       alert(JSON.stringify(values, null, 2));
+//       console.log(values);
+//       axios
+//         .post('/api/mail', values)
+//         .then(function (response) {
+//           console.log(response);
+//         })
+//         .catch(function (error) {
+//           console.log(error);
+//         });
+//     },
+//   });
+//   return (
+//     <form onSubmit={formik.handleSubmit}>
+//       <label htmlFor='name'>Name</label>
+//       <input
+//         id='name'
+//         name='name'
+//         type='text'
+//         onChange={formik.handleChange}
+//         value={formik.values.name}
+//       />
+
+//       <label htmlFor='email'>Email Address</label>
+//       <input
+//         id='email'
+//         name='email'
+//         type='email'
+//         onChange={formik.handleChange}
+//         value={formik.values.email}
+//       />
+
+//       <label htmlFor='message'>Message</label>
+//       <input
+//         id='message'
+//         name='message'
+//         type='text'
+//         onChange={formik.handleChange}
+//         value={formik.values.message}
+//       />
+
+//       <button type='submit'>Submit</button>
+//     </form>
+//   );
+// };
+
+// export default SignupForm;

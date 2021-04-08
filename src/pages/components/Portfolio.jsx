@@ -12,7 +12,7 @@ import styles from '../styles/portfolio.module.scss';
 
 const Portfolio = () => {
   return (
-    <div class={styles.homeprojects}>
+    <div className={styles.homeprojects}>
       <h2>Featured Projects</h2>
       <div className={styles.projectscontainer}>
         <div className={styles.projectstyle}>
@@ -23,21 +23,21 @@ const Portfolio = () => {
           </a>
         </div>
 
-        <div class={styles.projectstyle}>
+        <div className={styles.projectstyle}>
           <h3>Uva</h3>
           <p>Restaurant</p>
           <a href='https://restauranteuva.now.sh/' target='_blank'>
             <img src={uva} alt='' />
           </a>
         </div>
-        <div class={styles.projectstyle}>
+        <div className={styles.projectstyle}>
           <h3>Code Caravan</h3>
           <p>Agency</p>
           <a href='https://www.codecaravan.com.br/' target='_blank'>
             <img src={codecaravan} alt='' />
           </a>
         </div>
-        <div class={styles.projectstyle}>
+        <div className={styles.projectstyle}>
           <h3>Biohazard Match</h3>
           <p>Game</p>
           <a href='https://biohazardgame.netlify.app/' target='_blank'>
@@ -45,7 +45,7 @@ const Portfolio = () => {
           </a>
         </div>
 
-        {/* <div class={styles.projectstyle}>
+        {/* <div className={styles.projectstyle}>
           <h3>Quitanda Veggie</h3>
           <p>Restaurant</p>
           <a href='https://quitandavegana.now.sh/' target='_blank'>
@@ -53,7 +53,7 @@ const Portfolio = () => {
           </a>
         </div> */}
 
-        <div class={styles.projectstyle}>
+        <div className={styles.projectstyle}>
           <h3>Games Tube</h3>
           <p>Video website</p>
           <a href='https://quitandavegana.now.sh/' target='_blank'>
