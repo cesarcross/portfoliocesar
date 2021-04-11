@@ -1,13 +1,22 @@
 import { Formik, Field, Form, ErrorMessage, useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
-
+import { ToastContainer, toast } from 'react-toastify';
 import styles from '../styles/contact.module.scss';
 import whats from '../../assets/images/whats.png';
 
 // const isRequired = () => {
 //   return alert('Please fill all the fields');
 // };
+
+const notify = () =>
+  toast(`Information required`, {
+    position: 'bottom-center',
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    progress: undefined,
+  });
 
 const Contact = () => {
   return (
@@ -16,11 +25,13 @@ const Contact = () => {
       validationSchema={Yup.object({
         name: Yup.string()
           // .max(15, 'Must be 15 characters or less')
-          .required('isRequired'),
+          .required(() => notify()),
 
-        email: Yup.string().email('Invalid email address').required('Required'),
+        email: Yup.string()
+          .email('Invalid email address')
+          .required(() => notify()),
 
-        message: Yup.string().required('Required'),
+        message: Yup.string().required(() => notify()),
       })}
       onSubmit={(values, { setSubmitting }) => {
         console.log('sent', JSON.stringify(values, null, 2));
@@ -48,7 +59,7 @@ const Contact = () => {
           <ErrorMessage name='email' />
 
           <label htmlFor='message'>Message</label>
-          <Field name='message' type='text' />
+          <Field name='message' component='textarea' rows='10' />
           <ErrorMessage name='message' />
 
           <div className={styles.mobilewhats}>

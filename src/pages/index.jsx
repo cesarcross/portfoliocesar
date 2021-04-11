@@ -1,7 +1,8 @@
 import Intro from './components/Intro';
 import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import styles from './styles/home.module.scss';
 
 function HomePage() {
@@ -9,6 +10,7 @@ function HomePage() {
     <div className={styles.container}>
       <Intro />
       <Portfolio />
+      <ToastContainer />
       <Contact />
     </div>
   );
