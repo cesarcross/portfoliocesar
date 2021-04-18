@@ -11,8 +11,6 @@ export default async function handler(req, res) {
       from: email,
       subject: `Nova mensagem de ${name}`,
       text: message,
-      // html: `<p>Assunto: ${subjectMatter}</p>
-      // <p>${textArea}</p>`,
     });
 
     return res.status(200).json({ msg: 'Message sent successfully.' });
