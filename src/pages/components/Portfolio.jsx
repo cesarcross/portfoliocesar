@@ -56,7 +56,7 @@ const Portfolio = () => {
         <div className={styles.projectstyle}>
           <h3>Games Tube</h3>
           <p>Video website</p>
-          <a href='https://quitandavegana.now.sh/' target='_blank'>
+          <a href='https://gamesblog.vercel.app/' target='_blank'>
             <img src={gamestube} alt='' />
           </a>
         </div>
