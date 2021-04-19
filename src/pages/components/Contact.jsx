@@ -34,6 +34,7 @@ const messageFailed = () =>
     hideProgressBar: false,
     closeOnClick: true,
     progress: undefined,
+   
   });
 
 const Contact = () => {

@@ -10,7 +10,7 @@ function HomePage() {
     <div className={styles.container}>
       <Intro />
       <Portfolio />
-      <ToastContainer />
+      <ToastContainer style={{ fontSize: '1.5rem' }} />
       <Contact />
     </div>
   );
