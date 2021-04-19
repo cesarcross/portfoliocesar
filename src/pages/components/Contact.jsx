@@ -19,7 +19,7 @@ import whats from '../../assets/images/whats.png';
 //   });
 
 const messageSent = () =>
-  toast(`Thanks for your message! I'll answer soon`, {
+  toast.success(`Thanks for your message! I'll answer soon`, {
     position: 'bottom-center',
     autoClose: 3000,
     hideProgressBar: false,
@@ -28,7 +28,7 @@ const messageSent = () =>
   });
 
 const messageFailed = () =>
-  toast(`Please fill all the fields`, {
+  toast.error(`Please fill all the fields`, {
     position: 'bottom-center',
     autoClose: 3000,
     hideProgressBar: false,
